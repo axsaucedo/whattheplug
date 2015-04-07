@@ -14,6 +14,5 @@ angular.module('whattheplugApp')
   	function ($scope, plugInfo) {
     	$scope.countries = Object.keys(plugInfo.plugInfo);
     	$scope.plugInfo = plugInfo.plugInfo;
-    	$scope.plugImg = plugInfo.imgMap;
 	}]
   );
