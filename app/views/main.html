@@ -1,0 +1,11 @@
+<span  class="country-input col-md-3 col-sm-12">Country:</span>
+<input class="country-input col-md-9 col-sm-12" ng-model="countrySelected" placeholder="What the plug, in..."/>
+<div class="jumbotron">
+  <h1>{{ countrySelected }}</h1>
+  <div class="col-sm-4 col-md-3" ng-repeat="plug in filteredPlugInfo = (plugInfo | filter:countrySelected )" >
+      <div style="height: 60px"><h4>{{ plug.country }}</h4></div>
+      <img class="img-responsive" ng-show="filteredPlugInfo.length < 5" ng-repeat="plugType in plug.plug" src="/images/plugs/{{ plugType }}.jpg">
+      {{ plug.volts }} - {{ plug.hertz }}
+  </div> 
+  <div style="clear: both"></div>
+</div>
